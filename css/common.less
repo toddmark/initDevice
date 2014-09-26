@@ -399,6 +399,9 @@ body{background-color: #f0f2f5;}
 	.m-header{
 		.hide;
 	}
+	.m-footer{
+		.hide;
+	}
 }
 // Mobile style
 // 移动端下需要隐藏的PC端节点. 
@@ -406,10 +409,122 @@ body{background-color: #f0f2f5;}
 	.header{
 		.hide;
 	}
+	.container{
+		margin: 0 auto;
+		width: 100%;
+		.title{
+			height: 42px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			li{
+				float: left;
+				display: inline;
+				width: 33.3%;
+				background-color: #fff;
+				a{
+					width: 100%;
+					height: 42px;
+					text-align: center;
+					h1{
+						margin: 10px auto 0;
+						color: #707070;
+						text-shadow: none;
+					}
+					h2{
+						display: none;
+					}
+				}	
+			}
+			.active{
+				background-color: #fff;
+				background-image: none;
+				height: 40px;
+				border-bottom: 2px solid #fea915;
+				h1{
+					color:#fea915;
+				}
+			}
+		}
+		.content{
+			margin: 0 auto;
+			padding-top: 10px;
+			width: 98%;
+			height: auto;
+			background-color: #f0f2f5;
+		}
+		.ppoe{
+			.rightPanel{
+				.hide;
+			}
+			.leftPanel{
+				float: none;
+				width: 100%;
+				border:none;
+				span{
+					display: none;
+				}
+				input{
+					padding-left: 40px;	
+					width:85%; 
+					height: 36px;
+					line-height: 36px;
+					background-repeat: no-repeat;
+					background-position: 10px center;
+					background-size: 12px 15px;
+					font-size: 12px;
+					font-weight: bold;
+				}
+				input[type='text']{
+					background-image: url('../img/user.png');
+				}
+				input[type='password']{
+					background-image: url('../img/password.png');
+				}
+			}
+			.danger{
+				margin: 0;
+				padding-left: 30px;
+				width: 85%;
+				border: none;
+				span{
+					display: block;
+					width: 15px; 
+					height: 15px;
+					background-size: cover;
+				}
+				h1{
+					float: left;
+					font-weight: bold;
+				}
+				h2{
+					color: #ff8b73;
+					font-weight: bold;
+				}
+			}
+			.button{
+				margin: 10px auto;
+				width: 95%;
+			}
+			.passwordOrigin{
+				float: right;
+				margin-right: 10px;
+			}
+		}
+		.staticIP{
+			.leftPanel{
+				.hide;
+			}
+		}
+		.three-g-Net{
+			.leftPanel{
+				.hide;
+			}
+		}
+	}
 }
 .m-header{
 	width: 100%;	
-	height: 42px;
+	height: 46px;
 	line-height: 40px;
 	background-color: #fe9d26;
 	color: #fff;
@@ -417,4 +532,24 @@ body{background-color: #f0f2f5;}
 	font-size: 18px;
 	text-align: center;
 	border-bottom: 2px solid #e68e21;
+	a{
+		margin: 12px 0 0 10px;
+		float: left;
+		display: inline;
+		width: 12px;
+		height: 22px;
+		background-image: url('../img/m-leftArrow.png');
+		background-size: contain;
+	}
+}
+.m-footer{
+	position: fixed;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+	color: #aaa;
+	font-family: @YaHei;
+	.blue{
+		color: @btnColor;
+	}
 }

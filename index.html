@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/common.css" />
 	<title>检测界面</title>
 </head>
@@ -30,7 +31,7 @@
 		</div>
 	</div>
 	<div class="m-header">
-		<span></span>
+		<a href="javascript:void(0);"></a>	
 		设置网络环境
 	</div>
 	<div class="container">
@@ -61,16 +62,16 @@
 				<form action="">
 					<label for="account">
 						<span>账号</span>
-						<input id="account" type="text" />
+						<input id="account" type="text" placeholder="请输入账号"/>
 					</label>
 					<label for="password">
 						<span>密码</span>
-						<input id="password" type="password" />
+						<input id="password" type="password" placeholder="请输入密码"/>
 					</label>
 					<div class="danger">
 						<span></span>
-						<h1>账号密码不正确</h1>
-						<h2>请重新输入账号</h2>
+						<h1>账号密码不正确! </h1>
+						<h2> 请重新输入账号</h2>
 					</div>
 					<button class="button relink">重新连接</button>
 					<a class="passwordOrigin" href="javascript:void(0);">账号密码来源</a>
@@ -80,6 +81,12 @@
 				<img src="img/ppoe.png" alt="" />
 			</div>
 		</div>
+	</div>
+	<div class="m-footer">
+		<span>技术支持</span>
+		<span>|</span>
+		<span>小鹿WiFi客服电话：</span>
+		<span class="blue">021-64458607</span>
 	</div>
 </body>
 </html>
