@@ -29,14 +29,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="m-header">
-		<span></span>
-		设置网络环境
-	</div>
 	<div class="container">
 		<div class="title">
 			<ul class="clearfix">
-				<li class="active">
+				<li>
 					<a href="index.html">
 						<h1>拨号上网</h1>
 						<h2>我有一个上网账号和密码</h2>
@@ -44,11 +40,11 @@
 				</li>
 				<li>
 					<a href="staticIp.html">
-						<h1>静态IP</h1>
+						<h1>静态IP上网</h1>
 						<h2>我有一个分配的IP</h2>
 					</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="3gNet.html">
 						<h1>3G上网</h1>
 						<h2>我有3G上网usim卡</h2>
@@ -56,28 +52,42 @@
 				</li>
 			</ul>
 		</div>
-		<div class="content ppoe clearfix">
+		<div class="content clearfix">
 			<div class="leftPanel">
-				<form action="">
-					<label for="account">
-						<span>账号</span>
-						<input id="account" type="text" />
-					</label>
-					<label for="password">
-						<span>密码</span>
-						<input id="password" type="password" />
-					</label>
-					<div class="danger">
-						<span></span>
-						<h1>账号密码不正确</h1>
-						<h2>请重新输入账号</h2>
-					</div>
-					<button class="button relink">重新连接</button>
-					<a class="passwordOrigin" href="javascript:void(0);">账号密码来源</a>
-				</form>
+				<img src="img/3GNet.png" alt="" />
 			</div>
 			<div class="rightPanel">
-				<img src="img/ppoe.png" alt="" />
+				<ul class="threeGNet">
+					<li>
+						<span></span>
+						<div>
+							<h1>3G模块</h1>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<div>
+							<h1>3G上网</h1>
+						</div>
+					</li>
+					<li class="danger">
+						<span></span>
+						<div>
+							<h1>usim卡</h1>
+							<p>试试插入usim卡，也可以插网线来上网哦</p>
+						</div>
+					</li>
+					<li class="danger">
+						<span></span>
+						<div>
+							<h1>3G信号</h1>
+							<p>请检查一下usim卡是不是有问题，还是设备有故障，也可以插网线来上网哦</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="bottomButton">
+				刷新试试
 			</div>
 		</div>
 	</div>

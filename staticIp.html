@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="css/common.css" />
+	<title>检测界面</title>
+</head>
+<body>
+	<div class="header">
+		<div class="w830 clearfix">
+			<div class="fl">
+				<img src="img/logo.png" alt="" class="logo" />
+			</div>
+			<div class="fr">
+				<ul>
+					<li>
+						<a href="javascript:void(0);">技术支持</a>
+					</li>
+					<li>
+						<div class="diver"></div>
+					</li>
+					<li>
+						<a href="javascript:void(0);">联系电话</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);">021-64458607</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="title">
+			<ul class="clearfix">
+				<li>
+					<a href="index.html">
+						<h1>拨号上网</h1>
+						<h2>我有一个上网账号和密码</h2>
+					</a>
+				</li>
+				<li class="active">
+					<a href="staticIp.html">
+						<h1>静态IP上网</h1>
+						<h2>我有一个分配的IP</h2>
+					</a>
+				</li>
+				<li>
+					<a href="3gNet.html">
+						<h1>3G上网</h1>
+						<h2>我有3G上网usim卡</h2>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="content staticIP clearfix">
+			<div class="leftPanel">
+				<img src="img/staticIp.png" alt="" />
+			</div>
+			<div class="rightPanel">
+				<form action="">
+					<label for="">
+						<span>IP地址</span>
+						<div >
+							<input maxlength="3" id="IP_address" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" class="none-bg-img" type="text" />
+						</div>
+					</label>	
+					<label for="">
+						<span>子网掩码</span>
+						<div>
+							<input maxlength="3" id="netmask" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" class="none-bg-img" type="text" />
+						</div>
+					</label>
+					<label for="">
+						<span>默认网关</span>
+						<div>
+							<input maxlength="3" id="defaultGateway" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" class="none-bg-img" type="text" />
+						</div>
+					</label>
+					<label for="">
+						<span>DNS</span>
+						<div>
+							<input maxlength="3" type="text" id="DNS" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" class="none-bg-img" type="text" />
+						</div>
+					</label>
+					<label for="">
+						<div>
+							<input maxlength="3" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" class="none-bg-img" type="text" />
+						</div>
+					</label>
+					<label for="">
+						<div>
+							<input maxlength="3" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" type="text" />
+							<input maxlength="3" class="none-bg-img" type="text" />
+						</div>
+					</label>
+					<div class="danger">
+						<span></span>
+						<h1>账号密码不正确或网线连接错误 </h1>
+						<h2>请修改配置信息后再试</h2>
+					</div>
+					<button class="button">
+						重新连接
+					</button>
+				</form>					
+			</div>
+		</div>
+	</div>
+</body>
+</html>
