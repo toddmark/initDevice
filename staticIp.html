@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/common.css" />
 	<title>检测界面</title>
+	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 </head>
-<body>
+<body class="mobileBg">
 	<div class="header">
 		<div class="w830 clearfix">
 			<div class="fl">
@@ -38,7 +39,7 @@
 		<div class="title">
 			<ul class="clearfix">
 				<li>
-					<a href="index.html">
+					<a href="ppoe.html">
 						<h1>拨号上网</h1>
 						<h2>我有一个上网账号和密码</h2>
 					</a>
@@ -57,67 +58,39 @@
 				</li>
 			</ul>
 		</div>
-		<div class="content staticIP clearfix">
+		<div class="content pt0 staticIP clearfix">
 			<div class="leftPanel">
 				<img src="img/staticIp.png" alt="" />
 			</div>
 			<div class="rightPanel">
 				<form action="">
-					<label for="">
+					<label for="IP_address">
 						<span>IP地址</span>
-						<div >
-							<input maxlength="3" id="IP_address" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" class="none-bg-img" type="text" />
-						</div>
+						<input maxlength="15" class="IP_address" id="IP_address" type="text" placeholder="IP地址"/>
 					</label>	
-					<label for="">
+					<label for="netmask">
 						<span>子网掩码</span>
-						<div>
-							<input maxlength="3" id="netmask" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" class="none-bg-img" type="text" />
-						</div>
+						<input maxlength="15" class="netmask" id="netmask" type="text" placeholder="子网掩码"/>
 					</label>
-					<label for="">
+					<label for="defaultGateway">
 						<span>默认网关</span>
-						<div>
-							<input maxlength="3" id="defaultGateway" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" class="none-bg-img" type="text" />
-						</div>
+						<input maxlength="15" class="defaultGateway" id="defaultGateway" type="text" placeholder="默认网关"/>
 					</label>
-					<label for="">
+					<label for="DNS">
 						<span>DNS</span>
-						<div>
-							<input maxlength="3" type="text" id="DNS" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" class="none-bg-img" type="text" />
-						</div>
+						<input maxlength="15" class="DNS" id="DNS" type="text"  placeholder="DNS"/>
 					</label>
-					<label for="">
-						<div>
-							<input maxlength="3" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" class="none-bg-img" type="text" />
-						</div>
+					<label for="DNSBackUP1">
+						<span>DNS备选1</span>
+						<input maxlength="15" class="DNSBackUP1" id="DNSBackUP1" type="text" placeholder="DNS备选1"/>
 					</label>
-					<label for="">
-						<div>
-							<input maxlength="3" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" type="text" />
-							<input maxlength="3" class="none-bg-img" type="text" />
-						</div>
+					<label for="DNSBackUP2">
+						<span>DNS备选2</span>
+						<input maxlength="15" class="DNSBackUP2" id="DNSBackUP2" type="text" placeholder="DNS备选2"/>
 					</label>
 					<div class="danger">
 						<span></span>
-						<h1>账号密码不正确或网线连接错误 </h1>
+						<h1>IP地址不正确， </h1>
 						<h2>请修改配置信息后再试</h2>
 					</div>
 					<button class="button">

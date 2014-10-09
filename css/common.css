@@ -72,6 +72,18 @@ acronym {
 body {
   background-color: #f0f2f5;
 }
+a {
+  text-decoration: none;
+}
+.detect-success {
+  background-image: url('../img/detect-success.png') !important;
+}
+.w100 {
+  width: 100% !important;
+}
+.w60per {
+  width: 60% !important;
+}
 .w830 {
   width: 830px;
   margin: 0 auto;
@@ -96,6 +108,12 @@ body {
 .none-bg-img {
   background-image: none !important;
 }
+.noFixed {
+  position: relative !important;
+}
+.mt0 {
+  margin-top: 0 !important;
+}
 .hide {
   display: none;
   visibility: hidden;
@@ -111,6 +129,17 @@ body {
 .button:hover {
   cursor: pointer;
   background: #5b97e3;
+}
+.accountOrigin {
+  background-image: url("../img/accountOrigin.png") ! important;
+}
+.nofuond {
+  background-image: url("../img/404.png");
+  height: 190px;
+  line-height: 190px;
+  margin: 0 auto;
+  text-align: center;
+  width: 190px;
 }
 .header {
   background-color: #fff;
@@ -161,13 +190,15 @@ body {
   text-decoration: none;
 }
 .title h1 {
-  margin-top: 15px;
-  margin-bottom: 8px;
+  font-family: "Microsoft YaHei";
+  margin-top: 21px;
+  margin-bottom: 4px;
   text-align: center;
   font-size: 18px;
   text-shadow: #cc8711 1px 1px 0;
 }
 .title h2 {
+  font-family: "Microsoft YaHei";
   text-align: center;
   font-size: 12px;
 }
@@ -176,6 +207,8 @@ body {
   background-image: url('../img/upArrow.png');
   background-repeat: no-repeat;
   background-position: bottom center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .content {
   position: relative;
@@ -196,12 +229,17 @@ body {
   float: right;
   width: 50%;
 }
+.content .rightPanel img {
+  margin: 0 auto;
+  display: block;
+}
 .content .rightPanel .threeGNet {
+  margin-top: -30px;
   margin-left: 56px;
   color: #9ad46f;
 }
 .content .rightPanel .threeGNet li {
-  margin: 10px auto;
+  margin: 20px auto;
   line-height: 35px;
 }
 .content .rightPanel .threeGNet span {
@@ -214,10 +252,11 @@ body {
 }
 .content .rightPanel .threeGNet div {
   margin-left: 60px;
-  width: 200px;
+  width: 220px;
   border-radius: 5px;
 }
 .content .rightPanel .threeGNet div h1 {
+  font-family: "Microsoft YaHei";
   padding-left: 10px;
   font-size: 16px;
   font-weight: bold;
@@ -253,12 +292,13 @@ body {
   box-shadow: 0 3px 0 #478ade;
   position: absolute;
   left: 38%;
-  bottom: 20px;
+  bottom: 40px;
   width: 180px;
   height: 48px;
   line-height: 48px;
   font-size: 18px;
   text-align: center;
+  font-weight: bold;
 }
 .content .bottomButton:hover {
   cursor: pointer;
@@ -266,28 +306,38 @@ body {
 }
 .ppoe label {
   display: block;
-  margin: 18px auto;
 }
 .ppoe label span {
+  margin-right: 10px;
   font-family: "Microsoft YaHei";
   color: #858585;
-  font-size: 18px;
+  font-size: 16px;
 }
 .ppoe label input {
+  font-family: "Microsoft YaHei";
   padding-left: 10px;
   width: 207px;
   height: 33px;
   line-height: 33px;
   color: #858585;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 5px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
 }
 .ppoe label input:hover {
-  border: 2px solid #5d9cec;
+  border: 1px solid #5d9cec;
+}
+.ppoe label + label {
+  margin: 18px auto;
+}
+.ppoe .leftPanel .wait {
+  height: 162px;
+}
+.ppoe .leftPanel .wait img {
+  margin-top: 60px;
 }
 .ppoe .danger {
-  margin-left: 114px;
+  margin-left: 118px;
   padding: 7px;
   width: 203px;
   font-size: 12px;
@@ -304,23 +354,29 @@ body {
   background-image: url('../img/linkFailed.png');
 }
 .ppoe .danger h1 {
+  font-family: "Microsoft YaHei";
   color: #ff8b73;
 }
 .ppoe .danger h2 {
+  font-family: "Microsoft YaHei";
   color: #a4a9ae;
 }
 .ppoe .relink {
+  font-family: "Microsoft YaHei";
   margin-top: 18px;
   margin-left: 50px;
   width: 127px;
   height: 38px;
   font-size: 14px;
+  font-weight: bold;
   border: none;
 }
 .ppoe .passwordOrigin {
+  margin-left: 1em;
   font-size: 12px;
   color: #00adfe;
   text-decoration: none;
+  font-family: "Microsoft YaHei";
 }
 .staticIP form label {
   display: block;
@@ -332,39 +388,36 @@ body {
   font-size: 18px;
 }
 .staticIP form label span {
+  margin-right: 5px;
   float: left;
   width: 100px;
   text-align: right;
-}
-.staticIP form label div {
-  margin-left: 110px;
-  width: 220px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-}
-.staticIP form label div input {
-  text-align: center;
-  padding-right: 10px;
-  width: 40px;
-  height: 33px;
-  border: none;
   font-size: 16px;
-  color: #858585;
-  background-image: url('../img/point.png');
-  background-repeat: no-repeat;
-  background-position: right center;
 }
-.staticIP form label div input:focus {
+.staticIP form label input {
+  font-family: "Microsoft YaHei";
+  margin-left: 10px;
+  padding-left: 10px;
+  width: 191px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-right: 10px;
+  height: 33px;
+  font-size: 16px;
+  color: #494949;
+}
+.staticIP form label input:hover {
   outline: 0;
+  border: 1px solid #5d9cec;
 }
 .staticIP .rightPanel {
   position: relative;
   top: -20px;
 }
 .staticIP .danger {
-  margin-left: 110px;
+  margin-left: 114px;
   padding: 7px;
-  width: 203px;
+  width: 196px;
   font-size: 12px;
   border-radius: 5px;
   border: 2px solid #ff8b73;
@@ -378,31 +431,40 @@ body {
   background-image: url('../img/linkFailed.png');
 }
 .staticIP .danger h1 {
+  font-family: "Microsoft YaHei";
   color: #ff8b73;
 }
 .staticIP .danger h2 {
+  font-family: "Microsoft YaHei";
   color: #a4a9ae;
 }
 .staticIP .button {
-  margin-left: 110px;
+  margin-left: 114px;
   margin-top: 18px;
   width: 127px;
   height: 38px;
   border: none;
+  font-size: 14px;
+  font-weight: bold;
 }
 .detectInterface .title {
-  padding: 20px;
+  height: 93px;
+  line-height: 93px;
   font-size: 20px;
   text-align: center;
 }
 .detectInterface .content .img {
   margin: 0 auto;
-  padding-top: 70px;
   width: 190px;
-  height: 120px;
+  height: 190px;
   line-height: 190px;
   text-align: center;
   background-image: url('../img/detect.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.detectInterface .content .img img {
+  margin-top: 70px;
 }
 .detectInterface .content .info {
   margin: 20px auto;
@@ -415,13 +477,17 @@ body {
 .detectInterface .content .info h2 {
   margin-top: 10px;
   font-size: 14px;
+  color: #a4a9ae;
 }
 .detectInterface .content .button {
   margin: 0 auto;
   display: block;
-  width: 217px;
+  width: 180px;
   font-size: 18px;
-  height: 48px;
+  height: 38px;
+}
+.reported {
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .m-header {
@@ -432,8 +498,37 @@ body {
     display: none;
     visibility: hidden;
   }
+  .m-info {
+    display: none;
+    visibility: hidden;
+  }
+  .staticIP form input {
+    /* firefox 19+ */
+    /* ie */
+  }
+  .staticIP form input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  .staticIP form input::-moz-placeholder {
+    color: transparent;
+  }
+  .staticIP form input:-ms-input-placeholder {
+    color: transparent;
+  }
+  .staticIP form input input:-moz-placeholder {
+    color: transparent;
+  }
 }
 @media screen and (max-width: 768px) {
+  body {
+    background-color: #fff;
+  }
+  .mobileBg {
+    background-color: #f4f4f4;
+  }
+  .pt0 {
+    padding-top: 0 !important;
+  }
   .header {
     display: none;
     visibility: hidden;
@@ -443,14 +538,14 @@ body {
     width: 100%;
   }
   .container .title {
-    height: 42px;
+    background-color: #fff;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
   .container .title li {
     float: left;
     display: inline;
-    width: 33.3%;
+    width: 33.33%;
     background-color: #fff;
   }
   .container .title li a {
@@ -459,6 +554,7 @@ body {
     text-align: center;
   }
   .container .title li a h1 {
+    font-size: 13px;
     margin: 10px auto 0;
     color: #707070;
     text-shadow: none;
@@ -469,6 +565,8 @@ body {
   .container .title .active {
     background-color: #fff;
     background-image: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     height: 40px;
     border-bottom: 2px solid #fea915;
   }
@@ -480,7 +578,10 @@ body {
     padding-top: 10px;
     width: 98%;
     height: auto;
-    background-color: #f0f2f5;
+    background-color: #fff;
+  }
+  .container .ppoe {
+    background-color: #f4f4f4;
   }
   .container .ppoe .rightPanel {
     display: none;
@@ -495,6 +596,7 @@ body {
     display: none;
   }
   .container .ppoe .leftPanel input {
+    font-family: "Microsoft YaHei";
     padding-left: 40px;
     width: 85%;
     height: 36px;
@@ -503,7 +605,6 @@ body {
     background-position: 10px center;
     background-size: 12px 15px;
     font-size: 12px;
-    font-weight: bold;
   }
   .container .ppoe .leftPanel input[type='text'] {
     background-image: url('../img/user.png');
@@ -512,9 +613,8 @@ body {
     background-image: url('../img/password.png');
   }
   .container .ppoe .danger {
-    margin: 0;
-    padding-left: 30px;
-    width: 85%;
+    margin: 0 auto;
+    width: 90%;
     border: none;
   }
   .container .ppoe .danger span {
@@ -533,25 +633,123 @@ body {
   }
   .container .ppoe .button {
     margin: 10px auto;
-    width: 95%;
+    width: 92%;
   }
   .container .ppoe .passwordOrigin {
     float: right;
-    margin-right: 10px;
+    margin-right: 22px;
   }
   .container .staticIP .leftPanel {
     display: none;
     visibility: hidden;
   }
+  .container .staticIP .rightPanel {
+    padding-top: 10px;
+    top: 0;
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+  }
+  .container .staticIP form label span {
+    display: none;
+  }
+  .container .staticIP form label input {
+    padding-left: 40px;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+    font-family: "Microsoft YaHei";
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+  }
+  .container .staticIP .button {
+    display: block;
+    margin: 10px auto;
+    width: 91%;
+  }
+  .container .staticIP .IP_address {
+    background-image: url('../img/ip.png');
+  }
+  .container .staticIP .netmask,
+  .container .staticIP .defaultGateway {
+    background-image: url('../img/gate.png');
+  }
+  .container .staticIP .DNS {
+    background-image: url('../img/dns.png');
+  }
+  .container .staticIP .danger {
+    margin: 0 auto;
+    width: 90%;
+    border: none;
+  }
+  .container .staticIP .danger span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+  }
+  .container .staticIP .danger h1 {
+    float: left;
+    font-weight: bold;
+  }
+  .container .staticIP .danger h2 {
+    color: #ff8b73;
+    font-weight: bold;
+  }
+  .container .content .rightPanel .threeGNet {
+    margin-left: 0;
+  }
+  .container .content .rightPanel .threeGNet span {
+    margin-right: 10px;
+  }
+  .container .content .rightPanel .threeGNet div {
+    width: 90%;
+    margin-left: 40px;
+  }
+  .container .content .bottomButton {
+    width: 88%;
+  }
+  .container .three-g-Net {
+    margin-bottom: 100px;
+  }
+  .container .three-g-Net br {
+    display: none;
+  }
   .container .three-g-Net .leftPanel {
     display: none;
     visibility: hidden;
+  }
+  .container .three-g-Net .rightPanel {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container .three-g-Net .bottomButton {
+    position: static;
+    margin: 0 auto;
+  }
+  .detectInterface {
+    margin-top: 60px;
+    background-color: #fff;
+  }
+  .detectInterface .title {
+    display: none;
+  }
+  .detectInterface .reported a {
+    width: 50%;
+  }
+  .detectInterface .reported a .button {
+    width: 80%;
+    font-size: 80%;
   }
 }
 .m-header {
   width: 100%;
   height: 46px;
-  line-height: 40px;
+  line-height: 44px;
   background-color: #fe9d26;
   color: #fff;
   font-family: "Microsoft YaHei";
@@ -578,4 +776,19 @@ body {
 }
 .m-footer .blue {
   color: #478ade;
+}
+.m-info {
+  margin: 0 auto 20px;
+  height: 175px;
+  background-color: #478ade;
+  color: #fff;
+  text-align: center;
+}
+.m-info img {
+  margin-top: 25px;
+  height: 100px;
+}
+.m-info p {
+  margin-top: 10px;
+  font-family: "Microsoft YaHei";
 }

@@ -39,7 +39,18 @@ abbr,acronym {
 @green: #9ad46f;
 
 body{background-color: #f0f2f5;}
-
+a{
+	text-decoration: none;
+}
+.detect-success{
+	background-image: url('../img/detect-success.png') !important;
+}
+.w100{
+	width: 100% !important;
+}
+.w60per{
+	width: 60% !important;
+}
 .w830{
 	width: 830px;
 	margin: 0 auto;
@@ -62,13 +73,19 @@ body{background-color: #f0f2f5;}
 .none-bg-img{
 	background-image: none !important;
 }
+.noFixed{
+	position: relative !important;
+}
+.mt0{
+	margin-top: 0 !important;
+}
 .hide{
 	display:none;
 	visibility: hidden;
 }
 .button{
 	border: none;
-	border-radius: 5px;
+	border-radius: 5px;		
 	font-family: @YaHei;
 	color: #fff;
 	background-color: #5d9cec;
@@ -77,6 +94,17 @@ body{background-color: #f0f2f5;}
 		cursor: pointer;
 		background:#5b97e3;	
 	}
+}
+.accountOrigin{
+	background-image: url("../img/accountOrigin.png") ! important;
+}
+.nofuond{
+	background-image: url("../img/404.png");
+    height: 190px;
+    line-height: 190px;
+    margin: 0 auto;
+    text-align: center;
+    width: 190px;
 }
 .header{
 	background-color: #fff;
@@ -109,7 +137,8 @@ body{background-color: #f0f2f5;}
 	width: 830px;
 }
 
-.title{background-color: @orange;
+.title{
+	background-color: @orange;
 	font-family: @YaHei;
 	color: #fff;
 	border-top-left-radius: 5px;
@@ -126,13 +155,15 @@ body{background-color: #f0f2f5;}
 		}
 	}
 	h1{
-		margin-top: 15px;
-		margin-bottom: 8px;
+		font-family: @YaHei;
+		margin-top: 21px;
+		margin-bottom: 4px;
 		text-align: center;
 		font-size:18px;
 		text-shadow: #cc8711 1px 1px 0;
 	}
 	h2{
+		font-family: @YaHei;
 		text-align: center;
 		font-size: 12px;
 	}
@@ -141,6 +172,8 @@ body{background-color: #f0f2f5;}
 		background-image: url('../img/upArrow.png');
 		background-repeat: no-repeat;
 		background-position: bottom center;	
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
 	}
 }
 .content{
@@ -160,11 +193,16 @@ body{background-color: #f0f2f5;}
 		.rightPanel{
 			float: right;				
 			width: 50%;
+			img{
+				margin: 0 auto;
+				display: block;
+			}
 			.threeGNet{
+				margin-top: -30px;
 				margin-left: 56px;
 				color: @green;					
 				li{
-					margin: 10px auto;
+					margin: 20px auto;
 					line-height: 35px;
 				}
 				span{
@@ -177,9 +215,10 @@ body{background-color: #f0f2f5;}
 				}
 				div{
 						margin-left: 60px;
-						width: 200px;
+						width: 220px;
 						border-radius: 5px;
 					h1{
+						font-family: @YaHei;
 						padding-left: 10px;
 						font-size: 16px;
 						font-weight: bold;
@@ -215,40 +254,53 @@ body{background-color: #f0f2f5;}
 		.button;
 		position: absolute;
 		left:38%;
-		bottom: 20px;
+		bottom: 40px;
 		width: 180px;
 		height: 48px;
 		line-height: 48px;
 		font-size: 18px;
 		text-align: center;
+		font-weight: bold;
 	}
 }
 // index.html
 .ppoe{
 	label{
 		display: block;
-		margin: 18px auto;
 		span{
+			margin-right: 10px;
 			font-family: @YaHei;
 			color: #858585;
-			font-size: 18px;
+			font-size: 16px;
 		}
 		input{
+			font-family: @YaHei;
 			padding-left: 10px;
 			width: 207px;
 			height: 33px;
 			line-height: 33px;
 			color: #858585;
-			font-size: 18px;
+			font-size: 16px;
 			border-radius: 5px;
-			border: 2px solid #ccc;
+			border: 1px solid #ccc;
 			&:hover{
-				border: 2px solid #5d9cec;
+				border: 1px solid #5d9cec;
 			}
 		}
 	}
+	label+label{
+		margin: 18px auto;
+	}
+	.leftPanel{
+			.wait{
+				height: 162px;
+				img{
+					margin-top: 60px;
+				}
+			}
+		}
 	.danger{
-		margin-left: 114px;
+		margin-left: 118px;
 		padding: 7px;
 		width: 203px;
 		font-size: 12px;
@@ -264,24 +316,30 @@ body{background-color: #f0f2f5;}
 			background-image: url('../img/linkFailed.png');
 		}
 		h1{
+			font-family: @YaHei;
 			color: #ff8b73;
 		}
 		h2{
+			font-family: @YaHei;
 			color:#a4a9ae;
 		}
 	}
 	.relink{
+		font-family: @YaHei;
 		margin-top: 18px;
 		margin-left: 50px;
 		width: 127px;
 		height: 38px;
 		font-size: 14px;
+		font-weight: bold;
 		border:none;
 	}
 	.passwordOrigin{
+		margin-left: 1em;
 		font-size: 12px;
 		color: #00adfe;
 		text-decoration: none;
+		font-family: @YaHei;
 	}
 }
 //staticIp.html
@@ -296,28 +354,24 @@ body{background-color: #f0f2f5;}
 			color:#858585;
 			font-size: 18px;
 			span{
+				margin-right: 5px;
 				float: left;
 				width: 100px;
 				text-align: right;
+				font-size: 16px;
 			}
-			div{
-				margin-left: 110px;
-				width: 220px;
-				border: 2px solid #ccc;			
+			input{
+				font-family: @YaHei;
+				margin-left: 10px;
+				padding-left: 10px;
+				width: 191px;
+				border: 1px solid #ccc;			
 				border-radius: 5px;
-				input{
-					text-align: center;
-					padding-right: 10px;
-					width: 40px;
-					height: 33px;
-					border: none;
-					font-size: 16px;
-					color: #858585;
-					background-image: url('../img/point.png');
-					background-repeat: no-repeat;
-					background-position: right center;
-					&:focus{ outline: 0; }
-				}
+				padding-right: 10px;
+				height: 33px;
+				font-size: 16px;
+				color: #494949;
+				&:hover{outline:0;  border: 1px solid #5d9cec;}
 			}
 		}
 	}
@@ -326,9 +380,9 @@ body{background-color: #f0f2f5;}
 		top: -20px;
 	}
 	.danger{
-		margin-left: 110px;
+		margin-left: 114px;
 		padding: 7px;
-		width: 203px;
+		width: 196px;
 		font-size: 12px;
 		border-radius: 5px;
 		border:2px solid #ff8b73;
@@ -341,36 +395,45 @@ body{background-color: #f0f2f5;}
 			background-image: url('../img/linkFailed.png');
 		}
 		h1{
+			font-family: @YaHei;
 			color: #ff8b73;
 		}
 		h2{
+			font-family: @YaHei;
 			color:#a4a9ae;
 		}
 	}
 	.button{
-		margin-left: 110px;
+		margin-left: 114px;
 		margin-top: 18px;
 		width: 127px;
 		height: 38px;
 		border: none;
+		font-size: 14px;
+		font-weight: bold;
 	}
 } 
 // detectInterface.html
 .detectInterface{
 	.title{
-		padding: 20px;
+		height: 93px;
+		line-height: 93px;
 		font-size: 20px;
 		text-align: center;
 	}
 	.content{
 		.img{
 			margin: 0 auto;
-			padding-top: 70px;
 			width: 190px;
-			height: 120px;
+			height: 190px;
 			line-height: 190px;
 			text-align: center;
 			background-image: url('../img/detect.gif');
+			background-repeat: no-repeat;
+			background-position: center;
+			img{
+				margin-top: 70px;
+			}
 		}	
 		.info{
 			margin: 20px auto;
@@ -382,30 +445,51 @@ body{background-color: #f0f2f5;}
 			h2{
 				margin-top: 10px;
 				font-size: 14px;
+				color: #a4a9ae;
 			}
 		}
 		.button{
 			margin: 0 auto;
 			display: block;
-			width: 217px;
+			width: 180px;
 			font-size: 18px;
-			height: 48px;
+			height: 38px;
 		}
 	}
+}
+// reported.html
+.reported{
+	margin: 0 auto;
 }
 // PC style 
 // PC端下需要隐藏移动端的节点
 @media screen and (min-width: 768px){
+	
 	.m-header{
 		.hide;
 	}
 	.m-footer{
 		.hide;
 	}
+	.m-info{
+		.hide;
+	}
+	.staticIP form input{
+		&::-webkit-input-placeholder { color:transparent; }
+		&::-moz-placeholder { color:transparent; } /* firefox 19+ */
+		&:-ms-input-placeholder { color:transparent; } /* ie */
+		input:-moz-placeholder { color:transparent; }
+	}
 }
 // Mobile style
-// 移动端下需要隐藏的PC端节点. 
 @media screen and (max-width: 768px){
+	body{background-color: #fff;}
+	.mobileBg{
+		background-color: #f4f4f4;
+	}
+	.pt0{
+		padding-top: 0 !important;
+	}
 	.header{
 		.hide;
 	}
@@ -413,19 +497,20 @@ body{background-color: #f0f2f5;}
 		margin: 0 auto;
 		width: 100%;
 		.title{
-			height: 42px;
+			background-color: #fff;
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 			li{
 				float: left;
 				display: inline;
-				width: 33.3%;
+				width: 33.33%;
 				background-color: #fff;
 				a{
 					width: 100%;
 					height: 42px;
 					text-align: center;
 					h1{
+						font-size: 13px;
 						margin: 10px auto 0;
 						color: #707070;
 						text-shadow: none;
@@ -438,6 +523,8 @@ body{background-color: #f0f2f5;}
 			.active{
 				background-color: #fff;
 				background-image: none;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
 				height: 40px;
 				border-bottom: 2px solid #fea915;
 				h1{
@@ -450,9 +537,10 @@ body{background-color: #f0f2f5;}
 			padding-top: 10px;
 			width: 98%;
 			height: auto;
-			background-color: #f0f2f5;
+			background-color: #fff;
 		}
 		.ppoe{
+			background-color: #f4f4f4;
 			.rightPanel{
 				.hide;
 			}
@@ -460,10 +548,14 @@ body{background-color: #f0f2f5;}
 				float: none;
 				width: 100%;
 				border:none;
+				label{
+
+				}
 				span{
 					display: none;
 				}
 				input{
+					font-family: @YaHei;
 					padding-left: 40px;	
 					width:85%; 
 					height: 36px;
@@ -472,7 +564,6 @@ body{background-color: #f0f2f5;}
 					background-position: 10px center;
 					background-size: 12px 15px;
 					font-size: 12px;
-					font-weight: bold;
 				}
 				input[type='text']{
 					background-image: url('../img/user.png');
@@ -482,9 +573,8 @@ body{background-color: #f0f2f5;}
 				}
 			}
 			.danger{
-				margin: 0;
-				padding-left: 30px;
-				width: 85%;
+				margin: 0 auto;
+				width: 90%;
 				border: none;
 				span{
 					display: block;
@@ -503,21 +593,124 @@ body{background-color: #f0f2f5;}
 			}
 			.button{
 				margin: 10px auto;
-				width: 95%;
+				width: 92%;
 			}
 			.passwordOrigin{
 				float: right;
-				margin-right: 10px;
+				margin-right: 22px;
 			}
 		}
 		.staticIP{
 			.leftPanel{
 				.hide;
 			}
+			.rightPanel{
+				padding-top: 10px;
+				top: 0;
+				float: none;
+				width: 100%;
+				margin: 0 auto;
+				background-color: #f4f4f4;
+			}
+			form{
+				label{
+					span{display: none;}
+					input{
+						padding-left: 40px;
+						display: block;
+						margin: 0 auto;
+						width: 80%;
+						text-align: left;
+						font-family: @YaHei;
+						background-repeat: no-repeat;
+						background-size: 20px;
+						background-position: 10px center;
+					}
+				}
+			}
+			.button{
+				display: block;
+				margin: 10px auto;
+				width: 91%;
+			}
+			.IP_address{
+				background-image: url('../img/ip.png');
+			}
+			.netmask,.defaultGateway{
+				background-image: url('../img/gate.png');
+			}
+			.DNS{
+				background-image: url('../img/dns.png');
+			}
+			.danger{
+				margin: 0 auto;
+				width: 90%;
+				border: none;
+				span{
+					display: block;
+					width: 15px; 
+					height: 15px;
+					background-size: cover;
+				}
+				h1{
+					float: left;
+					font-weight: bold;
+				}
+				h2{
+					color: #ff8b73;
+					font-weight: bold;
+				}
+			}
+		}
+		.content{
+			.rightPanel{
+				.threeGNet{
+					margin-left: 0;
+					span{
+						margin-right: 10px;
+					}
+					div{
+						width: 90%;
+						margin-left: 40px;
+					}
+				}
+			}
+			.bottomButton{
+				width: 88%;
+			}
 		}
 		.three-g-Net{
+			margin-bottom: 100px;
+			br{
+				display: none;
+			}
 			.leftPanel{
 				.hide;
+			}
+			.rightPanel{
+				float: none;
+				width: 90%;
+				margin: 0 auto;
+			}
+			.bottomButton{
+				position: static;
+				margin: 0 auto;
+			}
+		}
+	}
+	.detectInterface{
+		margin-top: 60px;
+		background-color: #fff;
+		.title{
+			display: none;
+		}
+		.reported{
+			a{
+				width: 50%;
+				.button{
+					width: 80%;
+					font-size: 80%;
+				}
 			}
 		}
 	}
@@ -525,7 +718,7 @@ body{background-color: #f0f2f5;}
 .m-header{
 	width: 100%;	
 	height: 46px;
-	line-height: 40px;
+	line-height: 44px;
 	background-color: #fe9d26;
 	color: #fff;
 	font-family: @YaHei;
@@ -551,5 +744,20 @@ body{background-color: #f0f2f5;}
 	font-family: @YaHei;
 	.blue{
 		color: @btnColor;
+	}
+}
+.m-info{
+	margin: 0 auto 20px;
+	height: 175px;
+	background-color: @btnColor;
+	color: #fff;
+	text-align: center;
+	img{
+		margin-top: 25px;
+		height: 100px;
+	}
+	p{
+		margin-top: 10px;
+		font-family: @YaHei;
 	}
 }

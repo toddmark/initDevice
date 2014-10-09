@@ -1,0 +1,9 @@
+{
+	"status": 1000,
+	"initDetect": true,
+	"netLine": true,
+	"thirdG": true,
+	"usim": true,
+	"usim_check": true,
+	"valudate_result": false
+}

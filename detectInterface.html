@@ -2,8 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/common.css" />
 	<title>检测界面</title>
+	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -29,28 +31,38 @@
 			</div>
 		</div>
 	</div>
+	<div class="m-header">
+		<a href="index.html"></a>
+		设置网络环境
+	</div>
 	<div class="container detectInterface">
-		<div class="title">
-			欢迎使用小鹿WIFI
-		</div>
+		<div class="title">欢迎使用小鹿WIFI</div>
 		<div class="content clearfix">
-			<div class="img">
-				<img src="img/wifi.png" alt="" />
+			<div class="img detect-success" >
 			</div>
 			<div class="hide info">
 				<h1>正在检测您的网络情况</h1>
 				<h2>正在检测中……</h2>
 			</div>
-			<div class="info">
-				<h1>已检测到您的3G模块</h1>
+			<div class="info" data-info="detectInterface">
+				<h1 class="hide">已检测到您的3G模块</h1>
 				<h1 class="hide">已检测到您的网线连接</h1>
 				<h1 class="hide">已检测到您的3G模块和网线连接</h1>
 				<h2>请点击下一步设置网络环境</h2>
 			</div>
-			<button class="button">
-				下一步
-			</button>
+			<a id="nextStep" href="javascript:void(0);">
+				<button class="button">下一步</button>
+			</a>
 		</div>
 	</div>
+	<div class="m-footer">
+		<span>技术支持</span>
+		<span>|</span>
+		<span>小鹿WiFi客服电话：</span>
+		<span class="blue">021-64458607</span>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">g_index=false</script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

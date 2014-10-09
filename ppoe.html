@@ -7,7 +7,7 @@
 	<title>检测界面</title>
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 </head>
-<body>
+<body class="mobileBg">
 	<div class="header">
 		<div class="w830 clearfix">
 			<div class="fl">
@@ -32,13 +32,13 @@
 		</div>
 	</div>
 	<div class="m-header">
-		<a href="javascript:void(0);"></a>	
+		<a href="/detectStatus.html"></a>	
 		设置网络环境
 	</div>
 	<div class="container">
 		<div class="title">
 			<ul class="clearfix">
-				<li>
+				<li class="active">
 					<a href="ppoe.html">
 						<h1>拨号上网</h1>
 						<h2>我有一个上网账号和密码</h2>
@@ -50,7 +50,7 @@
 						<h2>我有一个分配的IP</h2>
 					</a>
 				</li>
-				<li class="active">
+				<li>
 					<a href="3gNet.html">
 						<h1>3G上网</h1>
 						<h2>我有3G上网usim卡</h2>
@@ -58,54 +58,44 @@
 				</li>
 			</ul>
 		</div>
-		<div class="m-info">
-			<img src="img/no3g.png" alt="" />
-			<p>检测完成</p>
-		</div>
-		<div class="content three-g-Net clearfix">
+		<div class="content ppoe clearfix">
 			<div class="leftPanel">
-				<img src="img/3GNet.png" alt="" />
+				<div class="wait hide">
+					<img src="img/wait.gif" alt="" />
+				</div>
+				<form id="ppoeForm">
+					<label for="account">
+						<span>账号</span>
+						<input id="account" type="text" placeholder="请输入账号"/>
+					</label>
+					<label for="password">
+						<span>密码</span>
+						<input id="password" type="password" placeholder="请输入密码"/>
+					</label>
+					<div class="hide danger">
+						<span></span>
+						<h1>账号密码不正确! </h1>
+						<h2>请重新输入账号</h2>
+					</div>
+					<a id="startLink" href="javascript:void(0);">
+						<button onclick="return false" class="button relink">开始连接</button>
+					</a>
+					<a class="passwordOrigin" href="accountOrigin.html">账号密码来源</a>
+				</form>
 			</div>
 			<div class="rightPanel">
-				<ul class="threeGNet">
-					<li>
-						<span></span>
-						<div>
-							<h1>3G模块</h1>
-						</div>
-					</li>
-					<li>
-						<span></span>
-						<div>
-							<h1>3G上网</h1>
-						</div>
-					</li>
-					<li class="danger">
-						<span></span>
-						<div>
-							<h1>usim卡</h1>
-							<p>请重新更换usim卡, <br>还可以选择连接网线上网哦</p>
-						</div>
-					</li>
-					<li class="danger">
-						<span></span>
-						<div>
-							<h1>3G信号</h1>
-							<p>请重新更换usim卡, <br>还可以选择连接网线上网哦</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="bottomButton">
-				刷新试试
+				<img src="img/ppoe.png" alt="" />
 			</div>
 		</div>
 	</div>
-	<div class="m-footer noFixed">
+	<div class="m-footer">
 		<span>技术支持</span>
 		<span>|</span>
 		<span>小鹿WiFi客服电话：</span>
 		<span class="blue">021-64458607</span>
 	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">g_index=false</script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

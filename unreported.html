@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/common.css" />
-	<title>初始化检测</title>
+	<title>我要报备</title>
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 </head>
 <body>
@@ -32,20 +32,22 @@
 		</div>
 	</div>
 	<div class="m-header">
-		<a href="javascript:void(0);"></a>	
-		欢迎使用小鹿wifi	
+		<a href="javascript:void(0);" onclick="window.history.back()"></a>
+		设置网络环境
 	</div>
 	<div class="container detectInterface">
-		<div class="title">
-			欢迎使用小鹿WIFI
-		</div>
+		<div class="title">欢迎使用小鹿WIFI</div>
 		<div class="content clearfix">
-			<div class="img">
+			<div class="img detect-success" >
 			</div>
-			<div class=" info">
-				<h1>正在检测您的网络情况</h1>
-				<h2>正在检测中……</h2>
+			<div class="info" data-info="detectInterface">
+				<h1>您的设备已成功连接互联网</h1>
+				<h2><var>5</var>秒后自动进入设备报备界面</h2>
+				<h2 class="mt0">设备报备成功后,wifi才可以使用哦</h2>
 			</div>
+			<a id="needReport" href="javascript:void(0);">
+				<button class="button">我要报备</button>
+			</a>
 		</div>
 	</div>
 	<div class="m-footer">
@@ -55,7 +57,7 @@
 		<span class="blue">021-64458607</span>
 	</div>
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript">g_index=true</script>
+	<script type="text/javascript">g_index=false</script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
