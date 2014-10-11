@@ -2,8 +2,9 @@
 	"status": 1000,
 	"initDetect": true,
 	"netLine": true,
-	"thirdG": true,
+	"thirdG": false,
 	"usim": true,
 	"usim_check": true,
-	"valudate_result": false
+	"ppoe_account_result": false,
+	"IP_result": false
 }

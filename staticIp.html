@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/common.css" />
-	<title>检测界面</title>
+	<title>静态IP</title>
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 </head>
 <body class="mobileBg">
@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<div class="m-header">
-		<a href="javascript:void(0);"></a>	
+		<a href="javascript:void(0);" onclick="window.history.back();"></a>	
 		设置网络环境
 	</div>
 	<div class="container">
@@ -58,12 +58,16 @@
 				</li>
 			</ul>
 		</div>
-		<div class="content pt0 staticIP clearfix">
+		<div class="content pt0 mobileBg staticIP clearfix">
+
 			<div class="leftPanel">
 				<img src="img/staticIp.png" alt="" />
 			</div>
 			<div class="rightPanel">
-				<form action="">
+				<div class="wait hide">
+					<img src="img/wait.gif" alt="" />
+				</div>
+				<form  id="staticIp_form">
 					<label for="IP_address">
 						<span>IP地址</span>
 						<input maxlength="15" class="IP_address" id="IP_address" type="text" placeholder="IP地址"/>
@@ -88,14 +92,15 @@
 						<span>DNS备选2</span>
 						<input maxlength="15" class="DNSBackUP2" id="DNSBackUP2" type="text" placeholder="DNS备选2"/>
 					</label>
-					<div class="danger">
+					<div class="danger hide">
 						<span></span>
 						<h1>IP地址不正确， </h1>
 						<h2>请修改配置信息后再试</h2>
 					</div>
-					<button class="button">
-						重新连接
-					</button>
+					<a class="pos-r" id="startLink" href="javascript:void(0);">
+						<img class="m-refresh hide" src="img/refresh.gif" alt="" />	
+						<button onclick="return false" class="button relink">开始连接</button>
+					</a>
 				</form>					
 			</div>
 		</div>
@@ -106,5 +111,8 @@
 		<span>小鹿WiFi客服电话：</span>
 		<span class="blue">021-64458607</span>
 	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">g_index=false</script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -45,11 +45,14 @@ a{
 .detect-success{
 	background-image: url('../img/detect-success.png') !important;
 }
+.pos-r{
+	position: relative !important;
+}
 .w100{
 	width: 100% !important;
 }
-.w60per{
-	width: 60% !important;
+.w47per{
+	width: 47% !important;
 }
 .w830{
 	width: 830px;
@@ -80,7 +83,7 @@ a{
 	margin-top: 0 !important;
 }
 .hide{
-	display:none;
+	display:none !important;
 	visibility: hidden;
 }
 .button{
@@ -92,7 +95,7 @@ a{
 	box-shadow: 0 3px 0 #478ade;
 	&:hover{
 		cursor: pointer;
-		background:#5b97e3;	
+		background-color:#5d9cec;	
 	}
 }
 .accountOrigin{
@@ -256,11 +259,11 @@ a{
 		left:38%;
 		bottom: 40px;
 		width: 180px;
-		height: 48px;
-		line-height: 48px;
-		font-size: 18px;
-		text-align: center;
+		height: 38px;
+		line-height: 38px;
+		font-size: 14px;
 		font-weight: bold;
+		text-align: center;
 	}
 }
 // index.html
@@ -378,6 +381,9 @@ a{
 	.rightPanel{
 		position: relative;
 		top: -20px;
+		.wait{
+			margin-top: 100px;
+		}
 	}
 	.danger{
 		margin-left: 114px;
@@ -464,7 +470,9 @@ a{
 // PC style 
 // PC端下需要隐藏移动端的节点
 @media screen and (min-width: 768px){
-	
+	.m-refresh{
+		.hide;
+	}
 	.m-header{
 		.hide;
 	}
@@ -485,7 +493,7 @@ a{
 @media screen and (max-width: 768px){
 	body{background-color: #fff;}
 	.mobileBg{
-		background-color: #f4f4f4;
+		background-color: #f4f4f4 !important;
 	}
 	.pt0{
 		padding-top: 0 !important;
@@ -536,8 +544,14 @@ a{
 			margin: 0 auto;
 			padding-top: 10px;
 			width: 98%;
-			height: auto;
+			height: 500px;
 			background-color: #fff;
+		}
+		.m-refresh{
+			position:absolute;
+			left: 20%;
+			top: 0;
+			width: 17px;
 		}
 		.ppoe{
 			background-color: #f4f4f4;
@@ -593,7 +607,7 @@ a{
 			}
 			.button{
 				margin: 10px auto;
-				width: 92%;
+				width: 95%;
 			}
 			.passwordOrigin{
 				float: right;
@@ -610,6 +624,7 @@ a{
 				float: none;
 				width: 100%;
 				margin: 0 auto;
+				margin-bottom: 100px;
 				background-color: #f4f4f4;
 			}
 			form{
@@ -629,7 +644,6 @@ a{
 				}
 			}
 			.button{
-				display: block;
 				margin: 10px auto;
 				width: 91%;
 			}
@@ -643,6 +657,7 @@ a{
 				background-image: url('../img/dns.png');
 			}
 			.danger{
+				text-align: left;
 				margin: 0 auto;
 				width: 90%;
 				border: none;
@@ -664,13 +679,14 @@ a{
 		}
 		.content{
 			.rightPanel{
+				text-align: center;
 				.threeGNet{
 					margin-left: 0;
 					span{
 						margin-right: 10px;
 					}
 					div{
-						width: 90%;
+						width: 87%;
 						margin-left: 40px;
 					}
 				}
@@ -736,8 +752,7 @@ a{
 	}
 }
 .m-footer{
-	position: fixed;
-	bottom: 20px;
+	margin-bottom: 20px;
 	width: 100%;
 	text-align: center;
 	color: #aaa;

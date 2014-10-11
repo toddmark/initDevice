@@ -1,0 +1,28 @@
+F	js\css3-mediaqueries.js	/^		F.prototype = o;$/;"	c
+Object.create	js\css3-mediaqueries.js	/^	Object.create = function (o) {$/;"	f
+Object.create.F	js\css3-mediaqueries.js	/^		function F() {}$/;"	f
+cssHelper	js\css3-mediaqueries.js	/^var cssHelper = function () {$/;"	f
+cssHelper.regExp.BLOCKS	js\css3-mediaqueries.js	/^		BLOCKS: \/[^\\s{;][^{;]*\\{(?:[^{}]*\\{[^{}]*\\}[^{}]*|[^{}]*)*\\}\/g,$/;"	p
+document.onreadystatechange	js\css3-mediaqueries.js	/^		document.onreadystatechange = function () {$/;"	f
+domReady	js\css3-mediaqueries.js	/^var domReady = function () {$/;"	f
+domReady.init	js\css3-mediaqueries.js	/^	var init = function () {$/;"	f
+ua.test	js\css3-mediaqueries.js	/^	test: function (s) {$/;"	m
+ua.toString	js\css3-mediaqueries.js	/^	toString: function () {$/;"	m
+$.ajax	js\main.js	/^$.ajax = function(option) {$/;"	f
+URL	js\main.js	/^var URL = window.location.href;$/;"	v
+detectInterface	js\main.js	/^function detectInterface() {$/;"	f
+form	js\main.js	/^	var form = $('#staticIp_form');$/;"	v
+getQueryParams	js\main.js	/^function getQueryParams(name) {$/;"	f
+handleServerData	js\main.js	/^function handleServerData(data) {$/;"	f
+handle_style_betewwn_PC_and_mobile	js\main.js	/^function handle_style_betewwn_PC_and_mobile(btnStartLink, form, text) {$/;"	f
+index	js\main.js	/^function index() {$/;"	f
+originAjax	js\main.js	/^var originAjax = $.ajax;$/;"	v
+ppoe	js\main.js	/^function ppoe() {$/;"	f
+unreported	js\main.js	/^function unreported() {$/;"	f
+wait	js\main.js	/^	var wait = $('.wait');$/;"	v
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/

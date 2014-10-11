@@ -11,25 +11,59 @@ $(function() {
 		ppoe();
 	}
 	if (URL.indexOf('unreported') > 0) {
-
+		unreported();
+	}
+	if (URL.indexOf('staticIp') > 0) {
+		staticIp();
 	}
 })
+
+function staticIp() {
+	var btnStartLink = $('#startLink');
+	var form = $('#staticIp_form');
+	var wait = $('.wait');
+	btnStartLink.on('click', function() {
+		handle_style_betewwn_PC_and_mobile(btnStartLink, form, '正在连接');
+		$.ajax({
+			url: 'conf.json',
+			type: 'POST'
+		})
+			.done(function(data) {
+				data = handleServerData(data);
+				if (data.IP_result) {
+					window.location.href = './unreported.html';
+				} else {
+					handle_style_betewwn_PC_and_mobile(btnStartLink, form, '开始连接');
+					$('.danger').removeClass('hide');
+				}
+			})
+			.fail(function() {
+				console.log('error');
+			})
+	})
+}
+
+function unreported() {
+	var eleVar = $('var');
+	var btnA = $('#needReport');
+	var index = 5;
+	setInterval(function() {
+		index--;
+		eleVar.text(index);
+		if (index == 0) {
+			window.location.href = btnA.attr('href');
+		}
+	}, 1000)
+}
 
 function ppoe() {
 	var btnStartLink = $('#startLink');
 	var form = $('#ppoeForm');
 	var wait = $('.wait');
-	var mobileWidth = 768;
 	btnStartLink.on('click', function() {
-		var screenWidth = $(window).width();
 		var account = $('#account').val();
 		var password = $('#password').val();
-		if (screenWidth < mobileWidth) {
-
-		} else {
-			form.hide();
-			wait.toggleClass('hide');
-		}
+		handle_style_betewwn_PC_and_mobile(btnStartLink, form, '正在连接');
 		$.ajax({
 			url: 'conf.json',
 			type: 'POST',
@@ -37,16 +71,11 @@ function ppoe() {
 		})
 			.done(function(data) {
 				data = handleServerData(data);
-				if (data.valudate_result) {
+				if (data.ppoe_account_result) {
 					window.location.href = './unreported.html';
 				} else {
-					if (screenWidth < mobileWidth) {
-
-					} else {
-						form.show();
-						wait.toggleClass('hide');
-						$('.danger').removeClass('hide');
-					}
+					handle_style_betewwn_PC_and_mobile(btnStartLink, form, '开始连接');
+					$('.danger').removeClass('hide');
 				}
 			})
 			.fail(function() {
@@ -66,9 +95,11 @@ function detectInterface() {
 	}
 	if (netLine && !thirdG) {
 		domInfo.eq(1).toggleClass('hide');
+		btnStep.attr('href', 'ppoe.html');
 	}
 	if (!netLine && thirdG) {
 		domInfo.eq(0).toggleClass('hide');
+		btnStep.attr('href', '3gNet.html');
 	}
 	if (!netLine && !thirdG) {
 		window.location.href = './404.html';
@@ -90,19 +121,19 @@ function index() {
 					console.log('开始检测网络连接');
 					// 有网有3g
 					if (data.netLine && data.thirdG) {
-						window.location.href = './detectInterface.html?netLine=true&thirdG=true'
+						window.location.href = './detectInterface.html?netLine=' + data.netLine + '&thirdG=' + data.thirdG
 					}
 					// 有网无3g
 					if (data.netLine && !data.thirdG) {
-						window.location.href = './detectInterface.html?netLine=true&thirdG=true'
+						window.location.href = './detectInterface.html?netLine=' + data.netLine + '&thirdG=' + data.thirdG
 					}
 					// 无网有3g
 					if (!data.netLine && data.thirdG) {
-						window.location.href = './detectInterface.html?netLine=true&thirdG=true'
+						window.location.href = './detectInterface.html?netLine=' + data.netLine + '&thirdG=' + data.thirdG
 					}
 					// 无网无3g
 					if (!data.netLine && !data.thirdG) {
-						window.location.href = './detectInterface.html?netLine=true&thirdG=true'
+						window.location.href = './detectInterface.html?netLine=' + data.netLine + '&thirdG=' + data.thirdG
 					}
 				} else {
 					window.location.href = './404.html';
@@ -112,6 +143,33 @@ function index() {
 		.fail(function(data) {
 			console.log("error");
 		})
+}
+
+function handle_style_betewwn_PC_and_mobile(btnStartLink, form, text) {
+	var screenWidth = $(window).width();
+	var mobileWidth = 768;
+	var iconRefresh = $('.m-refresh');
+	var wait = $('.wait');
+	if (screenWidth < mobileWidth) {
+		iconRefresh.toggleClass('hide');
+		btnStartLink.children('button').text(text);
+	} else {
+		if (text === '正在连接') {
+			form.hide();
+		} else {
+			form.show();
+		}
+		wait.toggleClass('hide');
+	}
+}
+
+function handleServerData(data) {
+
+	return data;
+}
+
+function getQueryParams(name) {
+	return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 }
 
 var originAjax = $.ajax;
@@ -128,12 +186,3 @@ $.ajax = function(option) {
 	}, delay)
 	return deferred.promise();
 };
-
-function handleServerData(data) {
-
-	return data;
-}
-
-function getQueryParams(name) {
-	return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
-}

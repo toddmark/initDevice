@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/common.css" />
-	<title>检测界面</title>
+	<title>拨号上网</title>
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 </head>
 <body class="mobileBg">
@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<div class="m-header">
-		<a href="/detectStatus.html"></a>	
+		<a href="javascript:void(0);" onclick="window.history.back();"></a>	
 		设置网络环境
 	</div>
 	<div class="container">
@@ -75,9 +75,10 @@
 					<div class="hide danger">
 						<span></span>
 						<h1>账号密码不正确! </h1>
-						<h2>请重新输入账号</h2>
+						<h2>请重新输入账号密码</h2>
 					</div>
-					<a id="startLink" href="javascript:void(0);">
+					<a class="pos-r" id="startLink" href="javascript:void(0);">
+						<img class="m-refresh hide" src="img/refresh.gif" alt="" />	
 						<button onclick="return false" class="button relink">开始连接</button>
 					</a>
 					<a class="passwordOrigin" href="accountOrigin.html">账号密码来源</a>
