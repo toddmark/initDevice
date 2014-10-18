@@ -2,9 +2,21 @@
 	"status": 1000,
 	"initDetect": true,
 	"netLine": true,
-	"thirdG": false,
+	"thirdG": true,
+	"ppoe_account_result": true,
+	"IP_result": true,
 	"usim": true,
-	"usim_check": true,
-	"ppoe_account_result": false,
-	"IP_result": false
+	"usim_check": false,
+	"account": {
+		"online": false,
+		"name": "admin",
+		"password": "123456"
+	},
+	"IP_config": {
+		"online": false,
+		"IP_address": "192.168.1.1",
+		"netmask": "255.255.255.0",
+		"default_gateway": "255.255.255.0",
+		"DNS": "0.0.0.0"
+	}
 }

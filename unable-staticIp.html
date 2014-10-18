@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/common.css" />
-	<title>检测界面</title>
+	<title>静态IP</title>
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 </head>
-<body>
+<body class="">
 	<div class="header">
 		<div class="w830 clearfix">
 			<div class="fl">
@@ -39,65 +39,30 @@
 		<div class="title">
 			<ul class="clearfix">
 				<li>
-					<a href="ppoe.html">
+					<a href="unable-ppoe.html">
 						<h1>拨号上网</h1>
 						<h2>我有一个上网账号和密码</h2>
 					</a>
 				</li>
-				<li>
-					<a href="staticIp.html">
+				<li class="active">
+					<a href="unable-staticIp.html">
 						<h1>静态IP</h1>
 						<h2>我有一个分配的IP</h2>
 					</a>
 				</li>
-				<li class="active">
-					<a href="3gNet.html">
+				<li>
+					<a href="3gNet.html?netLine=false&thirdG=true">
 						<h1>3G上网</h1>
 						<h2>我有3G上网usim卡</h2>
 					</a>
 				</li>
 			</ul>
 		</div>
-		<div class="m-info">
-			<img src="img/no3g.png" alt="" />
-			<p>检测完成</p>
-		</div>
-		<div class="content three-g-Net clearfix">
-			<div class="leftPanel">
-				<img src="img/3GNet.png" alt="" />
-			</div>
-			<div class="rightPanel">
-				<ul class="threeGNet">
-					<li>
-						<span></span>
-						<div>
-							<h1>3G模块</h1>
-						</div>
-					</li>
-					<li>
-						<span></span>
-						<div>
-							<h1>3G上网</h1>
-						</div>
-					</li>
-					<li class="hide">
-						<span></span>
-						<div>
-							<h1>usim卡</h1>
-							<p>请重新更换usim卡, <br>还可以选择连接网线上网哦</p>
-						</div>
-					</li>
-					<li class="hide">
-						<span></span>
-						<div>
-							<h1>3G信号</h1>
-							<p>请重新更换usim卡, <br>还可以选择连接网线上网哦</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div id="thirdG_refresh" class="bottomButton disabled">
-				刷新试试
+		<div class="content  clearfix">
+			<div class="unable-netLine">
+				<img src="img/detect-fail.png" alt="" />
+				<p>未检测到您的网线接入</p>		
+				<p>请接入网线后再试</p>		
 			</div>
 		</div>
 	</div>
@@ -107,8 +72,5 @@
 		<span>小鹿WiFi客服电话：</span>
 		<span class="blue">021-64458607</span>
 	</div>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript">g_index=false</script>
-	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -42,6 +42,9 @@ body{background-color: #f0f2f5;}
 a{
 	text-decoration: none;
 }
+.logged{
+
+}
 .detect-success{
 	background-image: url('../img/detect-success.png') !important;
 }
@@ -73,6 +76,10 @@ a{
 	font-size: 0;
 }
 .clearfix{zoom:1}
+.disabled{
+	box-shadow: 0 3px 0 #959595 !important;
+	background-color: #aaa !important;
+}
 .none-bg-img{
 	background-image: none !important;
 }
@@ -108,6 +115,18 @@ a{
     margin: 0 auto;
     text-align: center;
     width: 190px;
+}
+.unable-netLine{
+	margin-top: 50px;
+	text-align: center;
+	img{
+		margin-bottom: 20px;
+	}
+	p{
+		 color: #858585;
+	    font-family: @YaHei;
+	    font-size: 18px;
+	}
 }
 .header{
 	background-color: #fff;
@@ -488,6 +507,10 @@ a{
 		&:-ms-input-placeholder { color:transparent; } /* ie */
 		input:-moz-placeholder { color:transparent; }
 	}
+	.logged{
+		background-color: #f0f2f5;
+		color:#494949;
+	}
 }
 // Mobile style
 @media screen and (max-width: 768px){
@@ -619,6 +642,7 @@ a{
 				.hide;
 			}
 			.rightPanel{
+				text-align: center;
 				padding-top: 10px;
 				top: 0;
 				float: none;
@@ -679,7 +703,6 @@ a{
 		}
 		.content{
 			.rightPanel{
-				text-align: center;
 				.threeGNet{
 					margin-left: 0;
 					span{

@@ -108,6 +108,10 @@ a {
 .clearfix {
   zoom: 1;
 }
+.disabled {
+  box-shadow: 0 3px 0 #959595 !important;
+  background-color: #aaa !important;
+}
 .none-bg-img {
   background-image: none !important;
 }
@@ -143,6 +147,18 @@ a {
   margin: 0 auto;
   text-align: center;
   width: 190px;
+}
+.unable-netLine {
+  margin-top: 50px;
+  text-align: center;
+}
+.unable-netLine img {
+  margin-bottom: 20px;
+}
+.unable-netLine p {
+  color: #858585;
+  font-family: "Microsoft YaHei";
+  font-size: 18px;
 }
 .header {
   background-color: #fff;
@@ -528,6 +544,10 @@ a {
   .staticIP form input input:-moz-placeholder {
     color: transparent;
   }
+  .logged {
+    background-color: #f0f2f5;
+    color: #494949;
+  }
 }
 @media screen and (max-width: 768px) {
   body {
@@ -660,6 +680,7 @@ a {
     visibility: hidden;
   }
   .container .staticIP .rightPanel {
+    text-align: center;
     padding-top: 10px;
     top: 0;
     float: none;
@@ -715,9 +736,6 @@ a {
   .container .staticIP .danger h2 {
     color: #ff8b73;
     font-weight: bold;
-  }
-  .container .content .rightPanel {
-    text-align: center;
   }
   .container .content .rightPanel .threeGNet {
     margin-left: 0;
