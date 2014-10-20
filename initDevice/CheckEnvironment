@@ -1,5 +1,5 @@
 {
 	"status": "1000",
-	"3G": "true",
-	"Wan": "true"
+	"is3G": 0,
+	"isWan":1 
 }

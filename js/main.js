@@ -7,8 +7,8 @@ $(function() {
 	if (URL.indexOf('detectInterface') > 0) {
 		detectInterface();
 	}
-	if (URL.indexOf('ppoe') > 0) {
-		ppoe();
+	if (URL.indexOf('pppoe') > 0) {
+		pppoe();
 	}
 	if (URL.indexOf('staticIp') > 0) {
 		staticIp();
@@ -42,7 +42,7 @@ function reported() {
 			if (!data.netLine) {
 				btnLink.attr('href', './3gNet.html' + '?netLine=' + data.netLine + '&thirdG=' + data.thirdG);
 			} else {
-				btnLink.attr('href', './ppoe.html' + '?netLine=' + data.netLine + '&thirdG=' + data.thirdG);
+				btnLink.attr('href', './pppoe.html' + '?netLine=' + data.netLine + '&thirdG=' + data.thirdG);
 			}
 			btnNetConfig.removeClass('disabled');
 		})
@@ -144,24 +144,24 @@ function staticIp() {
 }
 
 
-function ppoe() {
+function pppoe() {
 	change_navBar_when_first_load();
-	check_ppoe_status();
+	check_pppoe_status();
 	var btnStartLink = $('#startLink');
-	var form = $('#ppoeForm');
+	var form = $('#pppoeForm');
 	var wait = $('.wait');
 	btnStartLink.on('click', function() {
 		var account = $('#account').val();
 		var password = $('#password').val();
 		handle_style_betewwn_PC_and_mobile(btnStartLink, form, '正在连接');
 		$.ajax({
-			url: './DoPPPOE.json',
+			url: '/initDevice/PPPOEConnStatus',
 			type: 'POST',
 			data: "name=" + account + "&password=" + password
 		})
 			.done(function(data) {
 				data = handleServerData(data);
-				if (data.ppoe_account_result) {
+				if (data.pppoe_account_result) {
 					window.location.href = './unreported.html';
 				} else {
 					handle_style_betewwn_PC_and_mobile(btnStartLink, form, '开始连接');
@@ -181,11 +181,11 @@ function detectInterface() {
 	var btnStep = $('#nextStep');
 	if (netLine && thirdG) {
 		domInfo.eq(2).toggleClass('hide');
-		btnStep.attr('href', 'ppoe.html?netLine=' + netLine + '&thirdG=' + thirdG);
+		btnStep.attr('href', 'pppoe.html?netLine=' + netLine + '&thirdG=' + thirdG);
 	}
 	if (netLine && !thirdG) {
 		domInfo.eq(1).toggleClass('hide');
-		btnStep.attr('href', 'ppoe.html?netLine=' + netLine + '&thirdG=' + thirdG);
+		btnStep.attr('href', 'pppoe.html?netLine=' + netLine + '&thirdG=' + thirdG);
 	}
 	if (!netLine && thirdG) {
 		domInfo.eq(0).toggleClass('hide');
@@ -199,7 +199,7 @@ function detectInterface() {
 function index() {
 	$.ajax({
 		url: '/initDevice/CheckEnvironment',
-		dataType: 'json'
+		cache: false
 	})
 		.done(function(data) {
 			data = handleServerData(data);
@@ -253,9 +253,9 @@ function handle_style_betewwn_PC_and_mobile(btnStartLink, form, text) {
 	}
 }
 
-function check_ppoe_status() {
+function check_pppoe_status() {
 	$.ajax({
-		url: './DoPPPOE.json',
+		url: '/initDevice/DoPPPoe',
 		type: "POST"
 	})
 		.done(function(data) {
@@ -275,7 +275,7 @@ function check_ppoe_status() {
 
 function check_staticIp_status() {
 	$.ajax({
-		url: './DoPPPOE.json',
+		url: './initDevice/DoPPPoe',
 		type: "POST"
 	})
 		.done(function(data) {
@@ -304,23 +304,29 @@ function change_navBar_when_first_load() {
 		})
 	}
 	if (!netLine) {
-		nav_tag_a.eq(0).attr('href', 'unable-ppoe.html');
+		nav_tag_a.eq(0).attr('href', 'unable-pppoe.html');
 		nav_tag_a.eq(1).attr('href', 'unable-staticIp.html');
 		nav_tag_a.eq(2).attr('href', '3gNet.html?netLine=' + netLine + '&thirdG=' + thirdG);
 	}
 	if (!thirdG) {
+		nav_tag_a.eq(0).attr('href', 'pppoe.html?netLine=' + netLine + '&thirdG=' + thirdG);
+		nav_tag_a.eq(1).attr('href', 'staticIp.html?netLine=' + netLine + '&thirdG=' + thirdG);
 		navList.eq(2).hide();
 	}
 }
 
 function handleServerData(data) {
+	if (typeof(data) == 'string') {
+		data = JSON.parse(data);
+	}
 	var result = {};
 	result.status = data['status'];
-	result.netLine = data['3G'];
-	result.thirdG = data['Wan'];
+	result.netLine = data['isWan'];
+	result.thirdG = data['is3G'];
 	result.account = data['account'];
 	result.usim = data['usim'];
 	result.usim_check = data['balance'];
+	result.pppoe_account_result = data['status'];
 	return result;
 }
 
